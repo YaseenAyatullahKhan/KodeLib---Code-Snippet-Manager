@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #cde2ff;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CollectionController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="580" prefWidth="880" spacing="15">
+         <padding>
+            <Insets bottom="20" left="20" right="20" top="20" />
+         </padding>
+         <children>
+            <Label style="-fx-font-size: 28px; -fx-font-weight: bold;" text="📁 Manage Collections" textFill="BLACK" />
+            
+            <!-- Create New Collection Section -->
+            <VBox spacing="10" style="-fx-border-color: #000000; -fx-border-radius: 10px; -fx-padding: 15px; -fx-background-color: #ffffff;">
+               <children>
+                  <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Create New Collection" textFill="BLACK" />
+                  <HBox alignment="CENTER_LEFT" spacing="10">
+                     <children>
+                        <TextField fx:id="collectionNameField" prefHeight="30.0" prefWidth="300.0" promptText="Enter collection name (e.g., Docker Configs, Java Utilities)" style="-fx-background-radius: 10px; -fx-padding: 5px;" />
+                        <Button onAction="#handleCreateCollection" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10px;" text="Create" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            
+            <!-- Collections List Section -->
+            <VBox spacing="10" style="-fx-border-color: #000000; -fx-border-radius: 10px; -fx-padding: 15px; -fx-background-color: #ffffff;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Available Collections" textFill="BLACK" />
+                  <ListView fx:id="collectionsListView" prefHeight="300.0" prefWidth="840.0" style="-fx-background-radius: 5px;" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            
+            <!-- Assign Snippet to Collection Section -->
+            <VBox spacing="10" style="-fx-border-color: #000000; -fx-border-radius: 10px; -fx-padding: 15px; -fx-background-color: #ffffff;">
+               <children>
+                  <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Assign Snippet to Collection" textFill="BLACK" />
+                  <HBox alignment="CENTER_LEFT" spacing="10">
+                     <children>
+                        <ComboBox fx:id="snippetComboBox" prefHeight="30.0" prefWidth="300.0" promptText="Select a snippet..." style="-fx-background-color: #cde2ff; -fx-background-radius: 10px;" />
+                        <ComboBox fx:id="collectionComboBox" prefHeight="30.0" prefWidth="300.0" promptText="Select a collection..." style="-fx-background-color: #cde2ff; -fx-background-radius: 10px;" />
+                        <Button onAction="#handleAssignSnippet" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-background-radius: 10px;" text="Assign" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            
+            <!-- Navigation -->
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+               <children>
+                  <Button onAction="#switchToHome" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #c7774c; -fx-text-fill: white; -fx-background-radius: 10px;" text="Back to Home" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

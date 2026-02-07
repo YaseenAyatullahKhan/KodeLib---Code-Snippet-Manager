@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #cde2ff;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomeController">
+   <children>
+      <AnchorPane layoutX="22.0" layoutY="66.0" prefHeight="209.0" prefWidth="535.0" style="-fx-background-radius: 30px; -fx-border-radius: 30px; -fx-border-color: #ffffff; -fx-background-color: #fffef3;">
+         <children>
+            <Label layoutX="179.0" layoutY="23.0" prefHeight="79.0" prefWidth="315.0" text="WELCOME TO KODELIB!">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="27.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9157894849777222" green="0.5511695742607117" blue="0.04070175439119339" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.03799999877810478" green="0.21044670045375824" blue="0.949999988079071" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="180.0" layoutY="97.0" prefHeight="43.0" prefWidth="323.0" text="Your Code Snippet Manager!">
+               <font>
+                  <Font name="Bodoni MT Italic" size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9157894849777222" green="0.5511695742607117" blue="0.04070175439119339" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.03799999877810478" green="0.21044670045375824" blue="0.949999988079071" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="181.0" layoutY="139.0" prefHeight="43.0" prefWidth="364.0" text="Create and save your snippets here easily!">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9157894849777222" green="0.5511695742607117" blue="0.04070175439119339" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.03799999877810478" green="0.21044670045375824" blue="0.949999988079071" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ImageView fitHeight="149.0" fitWidth="137.0" layoutX="27.0" layoutY="33.0">
+               <image>
+                  <Image url="/view/Team logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="196.0" layoutY="314.0" spacing="15">
+         <children>
+            <Button onAction="#switchToLogin" prefHeight="24.0" prefWidth="90.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10px;" text="Login" />
+            <Button onAction="#switchToSignup" prefHeight="22.0" prefWidth="93.0" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-background-radius: 10px;" text="Sign Up" />
+         </children>
+      </HBox>
+      <Separator layoutX="71.0" layoutY="298.0" maxWidth="688.0" prefHeight="2.0" prefWidth="450.0" style="-fx-background-color: #ffffff;" />
+   </children>
+</AnchorPane>
