@@ -5,7 +5,7 @@ KodeLib-FoP-WIX1002/
  │    └── main/
  │         └── java/
  │              ├── app/
- │              │   └── Main.java
+ │              │   └── MainApp.java
  │              ├── controller/
  │              │   ├── WelcomeController.java
  │              │   ├── LoginController.java
@@ -82,7 +82,7 @@ KodeLib-FoP-WIX1002/
 
 Example:
 
-    Main.java
+    MainApp.java
 
 ### **2.2** `controller/` – JavaFX Controllers
 
